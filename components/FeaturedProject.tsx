@@ -10,7 +10,7 @@ export default function FeaturedProject() {
 
         <div className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-2xl overflow-hidden">
           <div className="grid md:grid-cols-2 gap-8 p-8">
-            {/* Left: Project info */}
+            
             <div className="flex flex-col justify-center">
               <div className="flex items-center gap-2 mb-4">
                 <span className="text-sm text-[#10b981]">● Live Product</span>
@@ -26,7 +26,7 @@ export default function FeaturedProject() {
 
               <div className="flex flex-wrap gap-2 mb-6">
                 <span className="px-3 py-1 bg-[#6366f1]/10 text-[#6366f1] rounded-full text-sm">Next.js</span>
-                <span className="px-3 py-1 bg-[#8b5cf6]/10 text-[#8b5cf6] rounded-full text-sm">OpenAI</span>
+                <span className="px-3 py-1 bg-[#8b5cf6]/10 text-[#8b5cf6] rounded-full text-sm">Claude API</span>
                 <span className="px-3 py-1 bg-[#10b981]/10 text-[#10b981] rounded-full text-sm">Discord API</span>
                 <span className="px-3 py-1 bg-[#f59e0b]/10 text-[#f59e0b] rounded-full text-sm">Telegram API</span>
               </div>
@@ -41,7 +41,7 @@ export default function FeaturedProject() {
               </div>
             </div>
 
-            {/* Right: Screenshot placeholder */}
+            
             <div className="bg-[#0a0a0a] rounded-lg p-4 border border-[#2a2a2a]">
               <img src="/screenshots/Dashboard.png" alt="Dashboard Overview"/>
             </div>
