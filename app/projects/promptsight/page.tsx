@@ -116,7 +116,7 @@ export default function PromptSightCase() {
           <h2 className="text-3xl font-bold mb-4">Tech Stack</h2>
           <div className="flex flex-wrap gap-2">
             <span className="px-4 py-2 bg-[#6366f1]/10 text-[#6366f1] rounded-lg">Next.js 14</span>
-            <span className="px-4 py-2 bg-[#8b5cf6]/10 text-[#8b5cf6] rounded-lg">OpenAI GPT-4</span>
+            <span className="px-4 py-2 bg-[#8b5cf6]/10 text-[#8b5cf6] rounded-lg">Claude API</span>
             <span className="px-4 py-2 bg-[#10b981]/10 text-[#10b981] rounded-lg">Discord API</span>
             <span className="px-4 py-2 bg-[#f59e0b]/10 text-[#f59e0b] rounded-lg">Telegram Bot API</span>
             <span className="px-4 py-2 bg-[#06b6d4]/10 text-[#06b6d4] rounded-lg">Supabase</span>
@@ -139,7 +139,7 @@ export default function PromptSightCase() {
               <div className="shrink-0 w-8 h-8 bg-[#8b5cf6] rounded-full flex items-center justify-center font-bold">2</div>
               <div>
                 <h3 className="font-bold mb-1">AI Monitors Every Message</h3>
-                <p className="text-[#a3a3a3]">GPT-4 analyzes content against Howey Test criteria (investment expectation, common enterprise, profit from others' efforts)</p>
+                <p className="text-[#a3a3a3]">Claude analyzes content against Howey Test criteria (investment expectation, common enterprise, profit from others' efforts)</p>
               </div>
             </div>
             <div className="flex gap-4">
