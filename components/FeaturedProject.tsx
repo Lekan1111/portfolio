@@ -47,7 +47,7 @@ export default function FeaturedProject() {
             </div>
           </div>
         </div>
-
+       {/* COMMENTED OUT - Will add real projects later}
         {/* Other Projects Section */}
         <div className="mt-16">
           <h3 className="text-2xl font-bold mb-8">Other Projects</h3>
