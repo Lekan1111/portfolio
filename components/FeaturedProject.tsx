@@ -47,13 +47,15 @@ export default function FeaturedProject() {
             </div>
           </div>
         </div>
-       {/* COMMENTED OUT - Will add real projects later}
-        {/* Other Projects Section */}
+      
+       
+        
         <div className="mt-16">
+          {/* COMMENTED OUT - Will add real projects later 
           <h3 className="text-2xl font-bold mb-8">Other Projects</h3>
           <div className="grid md:grid-cols-2 gap-6">
             
-            {/* Project Card 1 - Placeholder */}
+            
             <div className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-xl p-6 hover:border-[#6366f1] transition">
               <div className="aspect-video bg-linear-to-br from-[#10b981]/20 to-[#059669]/20 rounded mb-4 flex items-center justify-center">
                 <span className="text-[#a3a3a3] text-sm">[Project Screenshot]</span>
@@ -68,7 +70,7 @@ export default function FeaturedProject() {
               </div>
             </div>
 
-            {/* Project Card 2 - Placeholder */}
+            
             <div className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-xl p-6 hover:border-[#6366f1] transition">
               <div className="aspect-video bg-linear-to-br from-[#f59e0b]/20 to-[#d97706]/20 rounded mb-4 flex items-center justify-center">
                 <span className="text-[#a3a3a3] text-sm">[Project Screenshot]</span>
@@ -84,6 +86,7 @@ export default function FeaturedProject() {
             </div>
 
           </div>
+          */}
         </div>
       </div>
     </section>
