@@ -8,7 +8,6 @@ export async function POST(request: Request) {
     const body = await request.json();
     const { name, email, projectType, message } = body;
 
-    // Send email using Resend
     const data = await resend.emails.send({
       from: 'Portfolio Contact <onboarding@resend.dev>', 
       to: 'azeezhorlam@gmail.com', 
