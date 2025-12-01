@@ -1,221 +1,138 @@
 import { ExternalLink, ArrowLeft, Shield, Bell, MessageSquare } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function PromptSightCase() {
   return (
-    <main className="min-h-screen pt-32 px-6">
-      <div className="max-w-4xl mx-auto">
-        <Link href="/" className="flex items-center gap-2 text-[#a3a3a3] hover:text-white mb-8">
+    <main className="min-h-screen pt-24 px-6 pb-20">
+      <div className="max-w-5xl mx-auto">
+        {/* Header */}
+        <Link href="/" className="flex items-center gap-2 text-zinc-400 hover:text-white mb-8">
           <ArrowLeft size={18} /> Back to Home
         </Link>
 
-        <h1 className="text-5xl font-bold mb-6">PromptSight Case Study</h1>
+        <h1 className="text-5xl md:text-6xl font-bold mb-6">PromptSight Case Study</h1>
         
-        <div className="flex items-center gap-4 mb-12">
-          <a href="https://promptsight-landing-page.vercel.app/" className="flex items-center gap-2 text-[#6366f1] hover:underline">
-            Visit Live Site <ExternalLink size={16} />
+        <div className="flex flex-wrap items-center gap-6 mb-12">
+          <a href="https://promptsight.vercel.app/" className="flex items-center gap-2 text-indigo-400 hover:underline text-lg">
+            Visit Live Site <ExternalLink size={18} />
           </a>
-          <span className="text-sm text-[#10b981]">● Live & Monitoring</span>
+          <span className="text-sm bg-emerald-500/20 text-emerald-400 px-3 py-1 rounded-full">Live & Monitoring</span>
         </div>
 
-        {/* Hero Screenshot */}
-        <div className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-xl p-8 mb-12">
-          <img src="/screenshots/Dashboard.png" alt="Dashboard Overview"/>
+        
+        <div className="relative -mx-6 mb-16 overflow-hidden rounded-2xl border border-zinc-800 shadow-2xl">
+          <Image
+            src="/screenshots/Dashboard.png"
+            alt="PromptSight Dashboard"
+            width={1920}
+            height={1080}
+            className="w-full h-auto"
+            priority
+          />
         </div>
 
-        <div className="mb-12">
-          <h2 className="text-3xl font-bold mb-6">Product Walkthrough</h2>
-        <div className="grid md:grid-cols-2 gap-6">
+        <h2 className="text-4xl font-bold mb-10">Product Walkthrough</h2>
 
-       {/* Screenshot 1 */}
-        <div className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-xl p-4">
-           <img src="/screenshots/Violation2.png" alt="Violation Feed"/>
-           <p className="text-[#a3a3a3] text-sm">Live monitoring of all Telegram/Discord messages</p>
-        </div>
 
-        {/* Screenshot 2 */}
-      <div className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-xl p-4">
-           <img src="/screenshots/Violations.png" alt="Violation Analysis"/>
-           <p className="text-[#a3a3a3] text-sm">AI breakdown of why a message was flagged</p>
-      </div>
-
-    {/* Screenshot 3 */}
-    <div className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-xl p-4">
-      <img src="/screenshots/Trends.png" alt="Risk Trends"/>
-      <p className="text-[#a3a3a3] text-sm">Track violation trends over time</p>
-    </div>
-
-    {/* Screenshot 4 */}
-      <div className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-xl p-4">
-      <img src="/screenshots/Settings.png" alt="Customize Settings"/>
-      <p className="text-[#a3a3a3] text-sm">Configure notifications for your team</p>
-      </div>
-
-      {/* Billing Section - Full Width */}
-      <div className="mt-6 bg-[#1a1a1a] border border-[#2a2a2a] rounded-xl p-6">
-      <img src="/screenshots/Billing.png" alt="Billing plan"/>
-       <h3 className="font-bold text-xl mb-2">Subscription Management</h3>
-       <p className="text-[#a3a3a3]">
-         Integrated Stripe billing with usage tracking, subscription tiers, and automated invoicing
-       </p>
-      </div>
-
-         </div>
-        </div>
-
-        {/* Problem Section */}
-        <div className="mb-12">
-          <h2 className="text-3xl font-bold mb-4">The Problem</h2>
-          <p className="text-[#a3a3a3] text-lg mb-6">
-            Crypto projects face constant SEC scrutiny. A single message in Telegram or Discord promising returns, 
-            suggesting investment expectations, or using securities language can trigger Howey Test violations.
-          </p>
-          <p className="text-[#a3a3a3] text-lg">
-            Most projects have no idea what their community managers or users are saying until it's too late. 
-            By the time legal reviews catch violations, the SEC may have already noticed. Legal fees for cleanup? 
-            <span className="text-white font-semibold"> $50K-$500K+</span>
-          </p>
-        </div>
-
-        {/* Solution Section */}
-        <div className="mb-12">
-          <h2 className="text-3xl font-bold mb-4">The Solution</h2>
-          <p className="text-[#a3a3a3] text-lg mb-8">
-            24/7 AI-powered monitoring that scans every message in your Telegram and Discord communities, 
-            flags Howey Test violations in real-time, and alerts your team before regulators see it.
-          </p>
-
-          {/* Feature Cards */}
-          <div className="grid md:grid-cols-3 gap-6 mb-8">
-            <div className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-xl p-6">
-              <Shield className="text-[#6366f1] mb-3" size={32} />
-              <h3 className="font-bold mb-2">Real-Time Scanning</h3>
-              <p className="text-[#a3a3a3] text-sm">
-                AI analyzes every message against SEC Howey Test criteria
-              </p>
+        <div className="grid md:grid-cols-2 gap-10 mb-20">
+          <div className="space-y-4">
+            <div className="overflow-x-auto -mx-6 px-6">
+              <Image src="/screenshots/Violation2.png" alt="Live monitoring" width={1400} height={900} className="rounded-xl border border-zinc-700 shadow-2xl min-w-[640px]" />
             </div>
-            <div className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-xl p-6">
-              <Bell className="text-[#8b5cf6] mb-3" size={32} />
-              <h3 className="font-bold mb-2">Instant Alerts</h3>
-              <p className="text-[#a3a3a3] text-sm">
-                Get notified the moment a violation is detected
-              </p>
+            <p className="text-zinc-400 text-center">Live monitoring of all Telegram/Discord messages</p>
+          </div>
+
+          <div className="space-y-4">
+            <div className="overflow-x-auto -mx-6 px-6">
+              <Image src="/screenshots/Violations.png" alt="AI breakdown" width={1400} height={900} className="rounded-xl border border-zinc-700 shadow-2xl min-w-[640px]" />
             </div>
-            <div className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-xl p-6">
-              <MessageSquare className="text-[#10b981] mb-3" size={32} />
-              <h3 className="font-bold mb-2">Multi-Platform</h3>
-              <p className="text-[#a3a3a3] text-sm">
-                Monitors Telegram and Discord simultaneously
-              </p>
+            <p className="text-zinc-400 text-center">AI breakdown of why a message was flagged</p>
+          </div>
+
+          <div className="space-y-4">
+            <div className="overflow-x-auto -mx-6 px-6">
+              <Image src="/screenshots/Trends.png" alt="Risk trends" width={1400} height={900} className="rounded-xl border border-zinc-700 shadow-2xl min-w-[640px]" />
             </div>
+            <p className="text-zinc-400 text-center">Track violation trends over time</p>
+          </div>
+
+          <div className="space-y-4">
+            <div className="overflow-x-auto -mx-6 px-6">
+              <Image src="/screenshots/Settings.png" alt="Settings" width={1400} height={900} className="rounded-xl border border-zinc-700 shadow-2xl min-w-[640px]" />
+            </div>
+            <p className="text-zinc-400 text-center">Configure notifications for your team</p>
           </div>
         </div>
 
-        {/* Tech Stack */}
-        <div className="mb-12">
-          <h2 className="text-3xl font-bold mb-4">Tech Stack</h2>
-          <div className="flex flex-wrap gap-2">
-            <span className="px-4 py-2 bg-[#6366f1]/10 text-[#6366f1] rounded-lg">Next.js 14</span>
-            <span className="px-4 py-2 bg-[#8b5cf6]/10 text-[#8b5cf6] rounded-lg">Claude API</span>
-            <span className="px-4 py-2 bg-[#10b981]/10 text-[#10b981] rounded-lg">Discord API</span>
-            <span className="px-4 py-2 bg-[#f59e0b]/10 text-[#f59e0b] rounded-lg">Telegram Bot API</span>
-            <span className="px-4 py-2 bg-[#06b6d4]/10 text-[#06b6d4] rounded-lg">Supabase</span>
-            <span className="px-4 py-2 bg-[#ec4899]/10 text-[#ec4899] rounded-lg">Stripe</span>
+        
+        <div className="mb-20">
+          <div className="overflow-x-auto -mx-6 px-6">
+            <Image src="/screenshots/Billing.png" alt="Billing" width={1600} height={900} className="rounded-xl border border-zinc-700 shadow-2xl min-w-[640px] mx-auto block" />
+          </div>
+          <div className="text-center mt-6">
+            <h3 className="text-2xl font-bold mb-2">Subscription Management</h3>
+            <p className="text-zinc-400">Integrated Stripe billing · usage tracking · subscription tiers · automated invoicing</p>
           </div>
         </div>
 
-        {/* How It Works */}
-        <div className="mb-12">
-          <h2 className="text-3xl font-bold mb-4">How It Works</h2>
-          <div className="space-y-6">
-            <div className="flex gap-4">
-              <div className="shrink-0 w-8 h-8 bg-[#6366f1] rounded-full flex items-center justify-center font-bold">1</div>
-              <div>
-                <h3 className="font-bold mb-1">Connect Your Communities</h3>
-                <p className="text-[#a3a3a3]">Add PromptSight bot to your Telegram groups and Discord servers</p>
-              </div>
-            </div>
-            <div className="flex gap-4">
-              <div className="shrink-0 w-8 h-8 bg-[#8b5cf6] rounded-full flex items-center justify-center font-bold">2</div>
-              <div>
-                <h3 className="font-bold mb-1">AI Monitors Every Message</h3>
-                <p className="text-[#a3a3a3]">Claude analyzes content against Howey Test criteria (investment expectation, common enterprise, profit from others' efforts)</p>
-              </div>
-            </div>
-            <div className="flex gap-4">
-              <div className="shrink-0 w-8 h-8 bg-[#10b981] rounded-full flex items-center justify-center font-bold">3</div>
-              <div>
-                <h3 className="font-bold mb-1">Get Instant Alerts</h3>
-                <p className="text-[#a3a3a3]">Dashboard shows violations in real-time. Email alerts sent to compliance team</p>
-              </div>
-            </div>
-            <div className="flex gap-4">
-              <div className="shrink-0 w-8 h-8 bg-[#f59e0b] rounded-full flex items-center justify-center font-bold">4</div>
-              <div>
-                <h3 className="font-bold mb-1">Take Action Fast</h3>
-                <p className="text-[#a3a3a3]">Delete risky messages, train team members, prevent SEC scrutiny</p>
-              </div>
-            </div>
-          </div>
+        
+        <div className="mb-16">
+          <h2 className="text-4xl font-bold mb-6">The Problem</h2>
+          <p className="text-zinc-400 text-lg leading-relaxed max-w-3xl">
+            Crypto projects face constant SEC scrutiny. A single message promising returns or using securities language can trigger Howey Test violations.
+          </p>
+          <p className="text-zinc-400 text-lg leading-relaxed max-w-3xl mt-4">
+            Most teams only find out when it’s too late. Legal cleanup? <span className="text-white font-bold">$50K–$500K+</span>
+          </p>
         </div>
 
-        {/* Results */}
-        <div className="mb-12">
-          <h2 className="text-3xl font-bold mb-4">Results</h2>
+        
+        <div className="mb-16">
+          <h2 className="text-4xl font-bold mb-8">The Solution</h2>
+          <p className="text-zinc-400 text-lg mb-10 max-w-3xl">
+            24/7 AI-powered monitoring that scans every message across Telegram & Discord and alerts your team before regulators notice.
+          </p>
+
           <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-xl p-6">
-              <div className="text-4xl font-bold text-[#10b981] mb-2">24/7</div>
-              <div className="text-[#a3a3a3]">Continuous monitoring vs manual spot-checks</div>
+            <div className="bg-zinc-800/50 border border-zinc-700 rounded-xl p-6">
+              <Shield className="text-indigo-400 mb-4" size={36} />
+              <h3 className="font-bold mb-2">Real-Time Scanning</h3>
+              <p className="text-zinc-400 text-sm">Claude analyzes every message against Howey Test criteria</p>
             </div>
-            <div className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-xl p-6">
-              <div className="text-4xl font-bold text-[#10b981] mb-2">&lt;1 min</div>
-              <div className="text-[#a3a3a3]">Average detection time per violation</div>
+            <div className="bg-zinc-800/50 border border-zinc-700 rounded-xl p-6">
+              <Bell className="text-purple-400 mb-4" size={36} />
+              <h3 className="font-bold mb-2">Instant Alerts</h3>
+              <p className="text-zinc-400 text-sm">Get notified the second a violation appears</p>
             </div>
-            <div className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-xl p-6">
-              <div className="text-4xl font-bold text-[#10b981] mb-2">$499/mo</div>
-              <div className="text-[#a3a3a3]">vs $50K+ legal cleanup costs</div>
+            <div className="bg-zinc-800/50 border border-zinc-700 rounded-xl p-6">
+              <MessageSquare className="text-emerald-400 mb-4" size={36} />
+              <h3 className="font-bold mb-2">Multi-Platform</h3>
+              <p className="text-zinc-400 text-sm">Telegram + Discord monitored at once</p>
             </div>
           </div>
         </div>
 
-        {/* Key Features List */}
-        <div className="mb-12">
-          <h2 className="text-3xl font-bold mb-4">Key Features</h2>
-          <ul className="space-y-3">
-            <li className="flex items-start gap-3 text-[#a3a3a3]">
-              <span className="text-[#10b981] mt-1">✓</span>
-              <span>Real-time Howey Test violation detection using GPT-4</span>
-            </li>
-            <li className="flex items-start gap-3 text-[#a3a3a3]">
-              <span className="text-[#10b981] mt-1">✓</span>
-              <span>Simultaneous monitoring of multiple Telegram groups and Discord servers</span>
-            </li>
-            <li className="flex items-start gap-3 text-[#a3a3a3]">
-              <span className="text-[#10b981] mt-1">✓</span>
-              <span>Dashboard showing violation history, risk scores, and message context</span>
-            </li>
-            <li className="flex items-start gap-3 text-[#a3a3a3]">
-              <span className="text-[#10b981] mt-1">✓</span>
-              <span>Instant email/Slack alerts for compliance teams</span>
-            </li>
-            <li className="flex items-start gap-3 text-[#a3a3a3]">
-              <span className="text-[#10b981] mt-1">✓</span>
-              <span>Export reports for legal review</span>
-            </li>
-            <li className="flex items-start gap-3 text-[#a3a3a3]">
-              <span className="text-[#10b981] mt-1">✓</span>
-              <span>Team member training mode to reduce future violations</span>
-            </li>
-          </ul>
+        
+        <div className="mb-16">
+          <h2 className="text-4xl font-bold mb-8">Tech Stack</h2>
+          <div className="flex flex-wrap gap-3">
+            <span className="px-5 py-3 bg-indigo-500/10 text-indigo-400 rounded-xl font-medium">Next.js 14</span>
+            <span className="px-5 py-3 bg-purple-500/10 text-purple-400 rounded-xl font-medium">Claude 3.5 API</span>
+            <span className="px-5 py-3 bg-emerald-500/10 text-emerald-400 rounded-xl font-medium">Discord API</span>
+            <span className="px-5 py-3 bg-yellow-500/10 text-yellow-400 rounded-xl font-medium">Telegram Bot API</span>
+            <span className="px-5 py-3 bg-cyan-500/10 text-cyan-400 rounded-xl font-medium">Supabase</span>
+            <span className="px-5 py-3 bg-pink-500/10 text-pink-400 rounded-xl font-medium">Stripe</span>
+          </div>
         </div>
 
-        {/* CTA */}
-        <div className="bg-linear-to-br from-[#6366f1]/10 to-[#8b5cf6]/10 border border-[#6366f1]/20 rounded-xl p-8 text-center">
-          <h3 className="text-2xl font-bold mb-3">Want to build something like this?</h3>
-          <p className="text-[#a3a3a3] mb-6">
-            I help crypto founders build compliance tools, dashboards, and Web3 integrations.
+        
+        <div className="bg-linear-to-br from-indigo-600/10 to-purple-600/10 border border-indigo-500/30 rounded-2xl p-12 text-center mt-24">
+          <h3 className="text-3xl font-bold mb-4">Ready to ship your idea?</h3>
+          <p className="text-zinc-300 text-lg mb-8 max-w-2xl mx-auto">
+            Fixed-price · 2–4 weeks · production-ready code you own
           </p>
-          <Link href="/contact" className="inline-block bg-[#6366f1] px-8 py-3 rounded-lg hover:bg-[#5558e3] transition">
+          <Link href="/contact" className="inline-block bg-indigo-600 hover:bg-indigo-500 transition px-10 py-4 rounded-xl text-lg font-semibold">
             Start Your Project
           </Link>
         </div>

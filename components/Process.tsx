@@ -48,8 +48,7 @@ export default function Process() {
             </div>
           ))}
         </div>
-
-        {/* Trust Builders */}
+       
         <div className="mt-12 grid md:grid-cols-3 gap-6">
           <div className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-xl p-6 text-center">
             <div className="text-2xl font-bold text-[#10b981] mb-2">Fixed Price</div>

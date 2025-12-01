@@ -5,21 +5,21 @@ export default function Services() {
   {
     icon: <Palette size={24} />,
     title: 'Landing Pages',
-    price: 'Starting at $1,200',  // CHANGED
+    price: 'Starting at $1,200',  
     description: 'High-converting pages that make your product shine',
     features: ['Responsive design', 'SEO optimized', '7-day delivery']
   },
   {
     icon: <Code size={24} />,
     title: 'SaaS MVP',
-    price: 'Starting at $4,000',  // CHANGED
+    price: 'Starting at $4,000',  
     description: 'Full-stack applications ready for users',
     features: ['Auth & payments', 'Admin dashboard', '3-4 week delivery']
   },
   {
     icon: <Zap size={24} />,
     title: 'Web3 Integration',
-    price: 'Starting at $6,000',  // CHANGED
+    price: 'Starting at $6,000',  
     description: 'Blockchain features that actually work',
     features: ['Wallet connect', 'Smart contracts', 'Token gating']
   }

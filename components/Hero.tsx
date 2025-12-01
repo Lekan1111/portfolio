@@ -37,8 +37,7 @@ export default function Hero() {
                  View Work
                </Link>
             </div>
-
-        {/* Social links */}
+       
         <div className="flex gap-4 justify-center text-[#a3a3a3]">
           <a href="https://github.com/Lekan1111" className="hover:text-white transition"><Github size={20} /></a>
           <a href="https://www.linkedin.com/in/azeez-lekan-a9748b299?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="hover:text-white transition"><Linkedin size={20} /></a>
