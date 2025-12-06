@@ -6,7 +6,7 @@ export default function PromptSightCase() {
   return (
     <main className="min-h-screen pt-24 px-6 pb-20">
       <div className="max-w-5xl mx-auto">
-        {/* Header */}
+        
         <Link href="/" className="flex items-center gap-2 text-zinc-400 hover:text-white mb-8">
           <ArrowLeft size={18} /> Back to Home
         </Link>
